@@ -52,7 +52,7 @@ def writeData(row):
             txtFile.write(f"80{col.value.replace('-','').strip().zfill(20)}{row[3].value.ljust(30)[0:30]}")
       case "F":
         total = str(col.value).zfill(13)+str(col.value-int(col.value))
-        txtFile.write(f"{total}{''.zfill(105)}PES00010000001 000000000000000{datetime.strptime(row[0].value, '%d/%m/%Y').date().strftime('%Y%m%d')}\n")
+        txtFile.write(f"{total}{'0'.zfill(106)}PES00010000001 000000000000000{datetime.strptime(row[0].value, '%d/%m/%Y').date().strftime('%Y%m%d')}\n")
 
 
 
